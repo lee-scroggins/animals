@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    new Retriever().start();
   }
 
-  private class Retriever extends Thread {
+  private static class Retriever extends Thread {
 
     @Override
     public void run() {
